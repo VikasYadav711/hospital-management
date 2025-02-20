@@ -17,4 +17,30 @@ public class DoctorController {
         doctorHashMapDb.put(doctorRequest.getId(), doctorRequest);
         return "Doctor saved successfully";
     }
+
+    @GetMapping("/getDoctor")
+    public  HashMap<Integer, Doctor> getAllDoctor(){
+        return doctorHashMapDb;
+    }
 }
+
+
+
+
+/*
+{
+    "id":1,
+    "name":"Dr. Vishesh Shukla",
+    "age":24,
+    "email":"vishes.musk4528@gmail.com",
+    "specialization":"pulmonologist"
+}
+
+{
+	"id": 2,
+	"name": "Dr. Prince Yadav",
+	"age": 27,
+	"email": "prince.md7@gmail.com",
+	"specialization": "Medicine"
+}
+ */
